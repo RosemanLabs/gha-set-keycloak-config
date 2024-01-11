@@ -1,4 +1,9 @@
 #!/bin/bash
 set -e
 
+export KEYCLOAK_URL=${INPUT_KEYCLOAK_URL}
+export KEYCLOAK_USER=${INPUT_KEYCLOAK_USER}
+export KEYCLOAK_PASSWORD=${INPUT_KEYCLOAK_PASSWORD}
+export IMPORT_FILES=${INPUT_IMPORT_FILES}
+
 java $JAVA_OPTS -jar /app/keycloak-config-cli.jar $0 $@
