@@ -28,7 +28,7 @@ jobs:
       - name: Set Keycloak configuration
         uses: RosemanLabs/gha-set-keycloak-config@v1
         with:
-          keycloak-url: "localhost:8080"
+          keycloak-url: "http://auth:8080"
           keycloak-user: "admin"
           keycloak-password: "admin"
           import-files: "/config/*"
