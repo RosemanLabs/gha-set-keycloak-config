@@ -1,0 +1,23 @@
+name: "Set Keycloak configuration"
+description: "Configures a Keycloak instance from an input configuration"
+inputs:
+  keycloak-url:
+    description: "The URL of the Keycloak instance"
+    required: true
+  keycloak-user:
+    description: "The user to use for authenticating with Keycloak"
+    required: true
+  keycloak-password:
+    description: "The password to use for authenticating with Keycloak"
+    required: true
+  import-files:
+    description: "A list of files to import into Keycloak"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - "-KEYCLOAK_URL ${{ inputs.keycloak-url }}"
+    - "-KEYCLOAK_USER ${{ inputs.keycloak-user }}"
+    - "-KEYCLOAK_PASSWORD ${{ inputs.keycloak-password }}"
+    - "-IMPORT_FILES ${{ inputs.import-files }}"
