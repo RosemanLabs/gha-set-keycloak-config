@@ -16,3 +16,5 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - "-p 8080:8080"
