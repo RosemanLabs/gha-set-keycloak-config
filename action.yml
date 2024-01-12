@@ -17,7 +17,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   env:
-    KEYCLOAK_URL: ${{ inputs.keycloak-url }}"
-    KEYCLOAK_USER: ${{ inputs.keycloak-user }}"
-    KEYCLOAK_PASSWORD: ${{ inputs.keycloak-password }}"
-    IMPORT_FILES: ${{ inputs.import-files }}"
+    KEYCLOAK_URL: ${{ inputs.keycloak-url }}
+    KEYCLOAK_USER: ${{ inputs.keycloak-user }}
+    KEYCLOAK_PASSWORD: ${{ inputs.keycloak-password }}
+    IMPORT_FILES: ${{ inputs.import-files }}
