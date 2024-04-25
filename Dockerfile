@@ -1,4 +1,4 @@
-FROM adorsys/keycloak-config-cli:5.10.0-22.0.4
+FROM adorsys/keycloak-config-cli:5.12.0-24.0.1
 
 COPY entrypoint.sh /entrypoint.sh
 

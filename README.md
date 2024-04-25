@@ -15,7 +15,7 @@ jobs:
           POSTGRES_USER: keycloak
           POSTGRES_PASSWORD: password
       auth:
-        image: keycloak/keycloak:22.0.3
+        image: keycloak/keycloak:24.0.3
         env:
           KC_DB_USER: keycloak
           KC_DB_PASSWORD: password
@@ -26,7 +26,7 @@ jobs:
 
     steps:
       - name: Set Keycloak configuration
-        uses: RosemanLabs/gha-set-keycloak-config@v1
+        uses: RosemanLabs/gha-set-keycloak-config@v1.4
         with:
           keycloak-url: "http://auth:8080"
           keycloak-user: "admin"
